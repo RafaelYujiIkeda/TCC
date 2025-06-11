@@ -14,7 +14,11 @@ const routes: Routes = [
     path: '',
     redirectTo: 'home',
     pathMatch: 'full'
+  },  {
+    path: 'tab7',
+    loadChildren: () => import('./tab7/tab7.module').then( m => m.Tab7PageModule)
   },
+
 
 
 ];
