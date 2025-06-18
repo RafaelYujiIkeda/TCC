@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-
+import { GeminiService } from '../services/gemini.service';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class Tab1Page {
-  constructor() {}
+  prompt: string = '';
+  response: string = '';
+
+  constructor(private geminiService: GeminiService) {}
+
 }
