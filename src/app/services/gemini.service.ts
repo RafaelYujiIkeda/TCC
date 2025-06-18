@@ -14,7 +14,7 @@ export class GeminiService {
     this.genAI = new GoogleGenerativeAI(environment.geminiApiKey);
     // Use um modelo válido, como 'gemini-1.5-pro'
     this.model = this.genAI.getGenerativeModel({
-      model: 'gemini-1.5-pro', // Modelo atual e amplamente disponível
+      model: 'gemini-1.5-flash', // Modelo atual e amplamente disponível
       generationConfig: {
         temperature: 0.9,
         topP: 1,
