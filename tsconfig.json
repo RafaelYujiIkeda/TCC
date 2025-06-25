@@ -23,6 +23,7 @@
       "dom"
     ],
     "types": [
+      "jasmine",
       "googlemaps"
     ],
     "useDefineForClassFields": false
