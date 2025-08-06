@@ -1,7 +1,7 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <div slot="start">
-      <ion-button fill="clear" href="/tabs/tab1">
+      <ion-button fill="clear" routerLink="/tabs/tab1">
         <ion-title>TrendFy</ion-title>
       </ion-button>
     </div>
@@ -18,12 +18,14 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-
+<ion-content>
+  <h1 class="title">Novidades da Moda</h1>
+  <div class="spacer"></div>
+  <div class="news-container">
+    <div class="news-item" *ngFor="let news of newsItems">
+      <h2>{{ news.title }}</h2>
+      <p>{{ news.content }}</p>
+      <ion-button fill="outline" (click)="readMore(news.id)">Read More</ion-button>
+    </div>
+  </div>
 </ion-content>

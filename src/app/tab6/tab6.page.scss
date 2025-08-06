@@ -1,0 +1,67 @@
+.tilulo{
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+}
+  .div-quadrado {
+    display: flex;
+    flex-direction: row; /* Arrange items in a row (columns) */
+    justify-content: space-between; /* Space out the columns evenly */
+    padding: 16px; /* Optional padding for better appearance */
+  }
+
+  .div-quadrado p {
+    flex: 1; /* Each paragraph takes equal space */
+    margin: 10px; /* Optional margin between columns */
+    text-align: justify; /* Optional: justify text for better readability */
+  }
+.espaco{
+  display: flex;
+  height: 20px;
+}
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 16px 0;
+}
+
+.spacer {
+  height: 20px;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.news-item {
+  flex: 1;
+  margin: 0 8px;
+  padding: 16px;
+  background-color: var(--ion-background-color, #f9f9f9);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.news-item p {
+  font-size: 0.9rem;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  .news-container {
+    flex-direction: column;
+  }
+
+  .news-item {
+    margin: 8px 0;
+  }
+}
