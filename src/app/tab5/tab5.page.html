@@ -18,11 +18,18 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
+    <div slot="end">
+      <ion-searchbar [(ngModel)]="searchQuery" placeholder="Pesquisar..." (ionChange)="onSearchChange()"></ion-searchbar>
+    </div>
 
-</ion-content>
+<ion-content>
+  <!-- Resto do conteúdo, como profile-card e photo-grid -->
+  <div class="profile-card">
+    <ion-avatar>
+      <img src="https://via.placeholder.com/100" alt="Profile Picture" />
+    </ion-avatar>
+    <h2>&#64;username</h2>
+    <p>Passionate about fashion and trends | 1k followers</p>
+    <ion-button fill="outline" (click)="editProfile()">Edit Profile</ion-button>
+  </div>
+  </ion-content>

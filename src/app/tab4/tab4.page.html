@@ -18,6 +18,31 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
+    <div slot="end">
+      <ion-searchbar [(ngModel)]="searchQuery" placeholder="Pesquisar..." (ionChange)="onSearchChange()"></ion-searchbar>
+    </div>
 
+  <ion-content>
+  <h1 class="title">Photo Feed</h1>
+  <div class="photo-grid">
+    <div class="photo-item" *ngFor="let post of filteredPosts">
+      <img [src]="post.imageUrl" alt="Post Image" />
+      <div class="post-details">
+        <p>{{ post.caption }}</p>
+        <div class="comments">
+          <ion-list>
+            <ion-item *ngFor="let comment of post.comments">
+              <ion-label>
+                <strong>{{ comment.user }}</strong>: {{ comment.text }}
+              </ion-label>
+            </ion-item>
+          </ion-list>
+          <ion-item>
+            <ion-input placeholder="Add a comment..." [(ngModel)]="newComment" (ionChange)="onCommentChange($event, post.id)"></ion-input>
+            <ion-button slot="end" fill="clear" (click)="addComment(post.id)">Post</ion-button>
+          </ion-item>
+        </div>
+      </div>
+    </div>
+  </div>
 </ion-content>

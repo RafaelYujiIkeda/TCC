@@ -1,0 +1,114 @@
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 16px 0;
+}
+
+.spacer {
+  height: 20px;
+}
+
+.news-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 16px;
+}
+
+.news-item {
+  flex: 1;
+  margin: 0 8px;
+  padding: 16px;
+  background-color: var(--ion-background-color, #f9f9f9);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h2 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.news-item p {
+  font-size: 0.9rem;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+@media (max-width: 600px) {
+  .news-container {
+    flex-direction: column;
+  }
+
+}
+
+.profile-card ion-avatar {
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+}
+
+.profile-card h2 {
+  font-size: 1.5rem;
+  margin: 8px 0;
+}
+
+.profile-card p {
+  font-size: 0.9rem;
+  color: var(--ion-color-medium);
+}
+
+.title {
+  text-align: center;
+  font-size: 1.8rem;
+  margin: 16px 0;
+}
+
+.spacer {
+  height: 20px;
+}
+
+.photo-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 16px;
+  padding: 16px;
+}
+
+.photo-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.post-details {
+  padding: 8px;
+}
+
+.post-details p {
+  font-size: 0.9rem;
+  margin-bottom: 8px;
+}
+
+.comments ion-list {
+  margin-bottom: 8px;
+}
+
+.comments ion-item {
+  --padding-start:
+0;
+}
+
+@media (max-width: 600px) {
+  .photo-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Ajuste para a barra de pesquisa */
+ion-searchbar {
+  width: 200px; /* Ajuste o tamanho conforme necessário */
+  margin-right: 10px;
+  justify-content: end;
+}
