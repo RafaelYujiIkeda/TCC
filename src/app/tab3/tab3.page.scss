@@ -1,0 +1,40 @@
+.mensagem-input {
+  background: #f1f1f1;
+  border-radius: 20px;
+  padding: 10px 15px;
+  margin: 5px 10px;
+  font-size: 16px;
+  --padding-start: 15px;
+  --padding-end: 15px;
+}
+
+ion-toolbar {
+  --background: transparent;
+  display: flex;
+  align-items: center;
+}
+
+ion-button {
+  --padding-start: 10px;
+  --padding-end: 10px;
+}
+
+ion-footer {
+  padding-bottom: 10px;
+}
+
+ion-item {
+  --background: transparent;
+  margin: 5px 10px;
+  border-radius: 10px;
+  max-width: 70%;
+}
+
+.enviada {
+  margin-left: auto;
+  --background: #000000; /* Verde para mensagens enviadas */
+}
+
+ion-item:not(.enviada) {
+  --background: #888888; /* Branco para mensagens do bot */
+}

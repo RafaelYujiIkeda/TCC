@@ -5,12 +5,13 @@
         <ion-title>TrendFy</ion-title>
       </ion-button>
     </div>
-
     <div>
       <ion-title>AI</ion-title>
     </div>
-
     <div slot="end">
+      <ion-button fill="clear" (click)="limparMensagens()">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
       <ion-menu-button>
         <ion-icon name="menu-outline"></ion-icon>
       </ion-menu-button>
@@ -18,16 +19,32 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content>
+<ion-content #content>
   <ion-card>
     <ion-card-header>Converse com a nossa AI</ion-card-header>
     <ion-card-content>
-      <ion-item>
-        <ion-label position="floating">Prompt</ion-label>
-        <ion-input [(ngModel)]="prompt"></ion-input>
-      </ion-item>
-      <ion-button expand="block" (click)="sendPrompt()">Enviar</ion-button>
-      <p *ngIf="response">{{ response }}</p>
+      <ion-list>
+        <ion-item *ngFor="let mensagem of mensagens" [class.enviada]="mensagem.enviada">
+          <ion-label>{{ mensagem.texto }}</ion-label>
+        </ion-item>
+      </ion-list>
     </ion-card-content>
   </ion-card>
 </ion-content>
+
+<ion-footer>
+  <ion-toolbar>
+    <form [formGroup]="chatForm" (ngSubmit)="sendPrompt()">
+      <ion-textarea
+        formControlName="mensagem"
+        placeholder="Digite uma mensagem..."
+        auto-grow="true"
+        rows="1"
+        class="mensagem-input"
+      ></ion-textarea>
+      <ion-button slot="end" fill="clear" type="submit" [disabled]="!chatForm.valid">
+        <ion-icon name="send"></ion-icon>
+      </ion-button>
+    </form>
+  </ion-toolbar>
+</ion-footer>
