@@ -9,9 +9,6 @@
       <ion-title>AI</ion-title>
     </div>
     <div slot="end">
-      <ion-button fill="clear" (click)="limparMensagens()">
-        <ion-icon name="trash-outline"></ion-icon>
-      </ion-button>
       <ion-menu-button>
         <ion-icon name="menu-outline"></ion-icon>
       </ion-menu-button>
@@ -22,6 +19,9 @@
 <ion-content #content>
   <ion-card>
     <ion-card-header>Converse com a nossa AI</ion-card-header>
+          <ion-button fill="clear" (click)="limparMensagens()">
+        <ion-icon name="trash-outline"></ion-icon>
+      </ion-button>
     <ion-card-content>
       <ion-list>
         <ion-item *ngFor="let mensagem of mensagens" [class.enviada]="mensagem.enviada">
@@ -41,10 +41,11 @@
         auto-grow="true"
         rows="1"
         class="mensagem-input"
-      ></ion-textarea>
+      >
       <ion-button slot="end" fill="clear" type="submit" [disabled]="!chatForm.valid">
         <ion-icon name="send"></ion-icon>
       </ion-button>
+      </ion-textarea>
     </form>
   </ion-toolbar>
 </ion-footer>

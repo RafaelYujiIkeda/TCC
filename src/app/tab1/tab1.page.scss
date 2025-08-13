@@ -1,46 +1,70 @@
-.Bem-Vindo{
+:root {
+  --ion-background-color: #300F16;
+  --ion-text-color: #E3B8B2;
+}
+
+ion-content {
+  --background: #300F16;
+}
+
+.Bem-Vindo {
   display: flex;
   justify-content: flex-start;
   margin-left: 15px;
   font-size: 50px;
+  color: #E3B8B2;
 }
-.subtitulo{
+
+.subtitulo {
   display: flex;
   justify-content: flex-start;
   margin-left: 15px;
   font-size: 15px;
   height: 50px;
+  color: #E3B8B2;
 }
-.conheça{
+
+.conheça {
   display: flex;
   margin-left: 15px;
+  color: #ffffff;
 }
-.button-conheca{
+
+.button-conheca {
   display: flex;
   margin-left: 15px;
   height: 30px;
   width: 150px;
+  --background: #541820;
+  --color: #ffffff;
 }
-.button-veja{
+
+.button-veja {
   display: flex;
   margin-left: 15px;
   height: 30px;
   width: 150px;
+  --background: #541820;
+  --color: #ffffff;
 }
-.espaco{
+
+.espaco {
   display: flex;
   height: 20px;
 }
-.veja{
+
+.veja {
   display: flex;
   margin-left: 15px;
+  color: #ffffff;
 }
+
 .espaco-grande {
   display: flex;
   height: 70px;
 }
+
 .espaco-hp {
   display: flex;
   height: 10px;
 }
-
