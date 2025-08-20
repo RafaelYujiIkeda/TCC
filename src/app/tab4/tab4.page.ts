@@ -23,7 +23,7 @@ export class Tab4Page implements OnInit {
   posts: Post[] = [
     {
       id: 1,
-      imageUrl: 'https://via.placeholder.com/300',
+      imageUrl: 'assets\D_NQ_NP_627608-MLA81683717874_012025-B.jpg',
       caption: 'Loving this summer vibe! 🌞',
       comments: [
         { user: 'friend1', text: 'Looks amazing!' },

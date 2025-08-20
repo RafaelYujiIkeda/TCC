@@ -1,0 +1,28 @@
+ion-list {
+  padding: 10px;
+}
+
+ion-item {
+  margin: 5px 0;
+  --background: #f9f9f9;
+}
+
+ion-avatar {
+  margin-right: 10px;
+}
+
+.timestamp {
+  font-size: 12px;
+  color: #666;
+}
+
+ion-toolbar[slot="bottom"] {
+  --background: #fff;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+}
+
+ion-textarea {
+  width: 80%;
+  --background: #f0f0f0;
+}
